@@ -1,36 +1,35 @@
 'use strict';
 
 require('dotenv').load({silent: true});
+// TOKEN = xoxb-23836068976-qMOsT1YxlQtqb0AAeblwyUcZ
 
-let Hapi = require('hapi');
-let path = require('path');
+if (!process.env.token) {
+  console.log('Error: Specify token in environment');
+  throw new Error();
+}
 
-let port = process.env.PORT || 3000;
+const Botkit = require('botkit');
+const os = require('os');
 
-let server = new Hapi.Server({
-  connections: {
-    routes: {
-      files: {
-        relativeTo: path.join(__dirname, 'public')
-      }
-    },
-    router: {
-      stripTrailingSlash: true
-    }
-  }
+let queries = require('./models/queries');
+import {pickOne} from './models/places';
+
+let controller = Botkit.slackbot({
+  debug: true
 });
 
-server.connection({port: port});
+let bot = controller.spawn({
+  token: process.env.TOKEN
+}).startRTM();
 
-const pluginHandler = (err) => {
-  if(err) console.error(err);
-};
+controller.hears(queries, 'direct_message,direct_mention,mention', (bot, msg) => {
+  bot.api.reactions.add({
+    channel: msg.channel
+  }, (err, res) => {
+    if (err) console.error(err);
+  });
 
-server.register(require('inert'), pluginHandler);
-server.register(require('./plugins/'), pluginHandler);
-server.register(require('./routes/'), pluginHandler);
-
-server.start(err => {
-  if(err) console.error(err);
-  console.log(`Server running at: http://localhost:${port}`);
+  controller.storage.users.get(msg.user, (err, user) => {
+    bot.reply(msg, `Ej @${user.name}, wa dacht je van ${pickOne}`);
+  });
 });
