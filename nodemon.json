@@ -3,19 +3,11 @@
   "ext": "js, jsx,  json, html",
 
   "watch": [
-    "/modules/*",
-    "/plugins/*",
-    "/models/*",
-    "/routes/*"
+    "/modules/*"
   ],
 
   "ignore": [
-    "/_js/*",
-    "/_scss/*",
     "/node_modules/*",
-    "/public/*",
-    "_config.js",
-    "gulpfile.js",
     "package.json",
     "webpack.config.js"
   ],

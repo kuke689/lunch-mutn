@@ -1,3 +1,5 @@
+'use strict';
+
 let places = {
   'macn': {
     title: 'de Macn',
@@ -13,8 +15,10 @@ let places = {
   }
 };
 
-export const pickOne = places => {
+const pickOne = places => {
   // pick random from the places object
-  let place = '';
+  let place = 'de Macn';
   return place;
 };
+
+module.exports = {pickOne};
