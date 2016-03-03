@@ -14,6 +14,18 @@ let data = {
   pizzahut: {
     title: 'Pizza Hut',
     location: [50.826102, 3.258564]
+  },
+  domino: {
+    title: 'Dominos Pizza',
+    location: [50.826456, 3.264140]
+  },
+  appel: {
+    title: 'Frietlounge Appel',
+    location: [50.825822, 3.258163]
+  },
+  pizzaitalia: {
+    title: 'Pizza Italia',
+    location: [50.825169, 3.259439]
   }
 };
 
