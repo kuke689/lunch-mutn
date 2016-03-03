@@ -1,24 +1,25 @@
 'use strict';
 
-let places = {
-  'macn': {
+let _ = require('lodash');
+
+let data = {
+  macn: {
     title: 'de Macn',
     location: [50.805754, 3.275098]
   },
-  'pauls': {
+  pauls: {
     title: 'Pauls Boutique',
     location: [50.826789, 3.271590]
   },
-  'pizzzahut': {
+  pizzahut: {
     title: 'Pizza Hut',
     location: [50.826102, 3.258564]
   }
 };
 
-const pickOne = places => {
-  // pick random from the places object
-  let place = 'de Macn';
+const pickOne = obj => {
+  let place = _.shuffle(obj)[0];
   return place;
 };
 
-module.exports = {pickOne};
+module.exports = {data, pickOne};

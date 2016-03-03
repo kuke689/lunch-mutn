@@ -1,10 +1,7 @@
 'use strict';
 
 let queries = [
-  'waar gawe eten',
-  'wa gawe eten',
-  'wat gaan we eten',
-  'waar gaan we eten'
+  'wa.*eten|wa.*eten',
 ];
 
 module.exports = queries;
