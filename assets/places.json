@@ -22,5 +22,13 @@
   "pizzaitalia": {
     "title": "Pizza Italia",
     "location": [50.825169, 3.259439]
-  }
+  },
+  "pastabasta": {
+    "title": "Pasta Basta",
+    "location": [50.826101, 3.264625]
+  },
+  "panos": {
+    "title": "Panos",
+    "location": [50.826585, 3.271062]
+  },
 }
