@@ -12,9 +12,8 @@ Runs in __Node__ (Botkit) on a __Raspberry Pi B+__ (Resin).
 ## Commands
 
 | Pattern/Command | Description | Scope
-|--- |--- |--- 
+|--- |--- |---
 | `--help, -h, help` | Displays a list of possible commands the bot can receive | Mention, Direct Mention, Private
-| _'shut down'_ | When ran outside of Private it points this out to the user mentioning the bot with this command. Otherwise it asks the user for confirmation and terminates the bot using `bot.closeRTM();` | Mention, Direct Mention, Private
 | _'honger'_ | Responds with the message if the bot can help. (Somebody is hungry) | Ambient
 | _'waar … eten'_<br>_'wa … eten'_ | Picks a random venue from `modules/places.js` and links to it using the Google Maps API. Matches the patterns described in `modules/queries.js` | Mention, Direct Mention, Private
 
