@@ -1,0 +1,17 @@
+.git/
+assets/
+test/
+
+.editorconfig
+.dockerignore
+.eslintignore
+.eslintrc
+.gitignore
+.travis.yml
+
+Dockerfile
+package.json
+nodemon.json
+
+README.md
+LICENSE
