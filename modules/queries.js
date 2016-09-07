@@ -1,5 +1,3 @@
-'use strict';
-
 let queries = [
   'wa.*eten|wa.*eten',
   'waar.*eten|waar.*eten'

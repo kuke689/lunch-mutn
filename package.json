@@ -10,16 +10,14 @@
     "serve": "nodemon ."
   },
   "engines": {
-    "node": "5.x.x",
+    "node": "6.x.x",
     "npm": "3.x.x"
   },
   "dependencies": {
-    "botkit": "0.0.7",
-    "dotenv": "^1.2.0",
+    "botkit": "0.2.2",
+    "dotenv": "2.0.0",
     "forever": "^0.15.2",
-    "hapi": "^10.5.0",
-    "inert": "^3.2.1",
-    "lodash": "^3.10.1"
+    "lodash.shuffle": "^4.2.0"
   },
   "license": "MIT"
 }
