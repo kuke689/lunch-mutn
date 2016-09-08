@@ -1,19 +1,14 @@
 {
-
-  "ext": "js, jsx,  json, html",
+  "ext": "js, json",
 
   "watch": [
+    "server.js",
     "/modules/*"
   ],
 
-  "ignore": [
-    "/node_modules/*",
-    "package.json",
-    "webpack.config.js"
-  ],
+  "ignore": ["/node_modules/*", "package.json"],
 
   "events": {
-    "start": "eslint */ --ignore-pattern _js/"
+    "start": "eslint */"
   }
-
 }
