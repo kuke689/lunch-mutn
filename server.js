@@ -30,8 +30,8 @@ controller.hears(queries, 'direct_message,direct_mention,mention', (bot, msg) =>
   controller.storage.users.get(msg.user, (err, user) => {
     let place = places.pickOne(places.data);
 
-    bot.reply(msg, `Ej @${msg.user}, wa dacht je van ${place.title}?
-https://www.google.com/maps/place/@${place.location}`);
+    bot.reply(msg, `Wa dacht je van *${place.title}*?
+:round_pushpin::world_map: = https://www.google.com/maps/place/@${place.location}`);
   });
 });
 
@@ -45,7 +45,7 @@ controller.hears('honger', 'ambient',
 controller.hears(['help', '-h', '--help'], 'direct_message,direct_mention,mention', (bot, msg) => {
   bot.startConversation(msg, (err, convo) => {
     convo.say(`Jow mutn, je snapt het duidelijk nie:
-- Ik antwoord alleen als je zin de woorden 'wa/waar' en 'eten' bevat.`);
+- Ik antwoord alleen als je zin de woorden _'wa/waar'_ en _'eten'_ bevat.`);
   });
 });
 
@@ -53,4 +53,4 @@ controller.hears(['help', '-h', '--help'], 'direct_message,direct_mention,mentio
 //MARK:- Respond_to: [someone calls out the bot]
 //MARK:- Trigger: [Mention/Private]
 controller.hears(['mutn, muttn'], 'mention,direct_mention,direct_message',
-  (bot, msg) => bot.reply(msg, 'Wien ister ier de mutn'));
+  (bot, msg) => bot.reply(msg, '*Wien ister ier de mutn*'));

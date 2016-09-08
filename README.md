@@ -5,7 +5,7 @@
 
 It was 2AM and I wanted to make something new since I wasn't going to sleep any time soon.
 
-Runs in __Node__ (Botkit) on a __Raspberry Pi B+__ (Resin).
+Runs on __Node__ (Botkit) & a __Raspberry Pi B+__ (Resin).
 
 ![](http://imgur.com/92om0mQ.png)
 
@@ -19,8 +19,8 @@ Runs in __Node__ (Botkit) on a __Raspberry Pi B+__ (Resin).
 
 ## Roadmap
 
-* Make responses in Markdown possible
 * Fix mentioning the user that's querying the bot. Currently it displays the ID of the user, instead of the handle.
+* Integrate button replies to cycle trough responses.
 
 ### Disclaimer
-> RATED R FOR A HAVING A FOULMOUTHED ATTITUDE. Speaking the proud language of West Vlaams.
+> RATED R FOR A HAVING A FOULMOUTHED ATTITUDE. Speaking the proud language of West-Vlaams.

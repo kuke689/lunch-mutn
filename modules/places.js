@@ -1,11 +1,8 @@
-'use strict';
-
-let _ = require('lodash');
-
-let data = require('../assets/places.json');
+const _shuffle = require('lodash.shuffle');
+const data = require('../assets/places.json');
 
 const pickOne = obj => {
-  let place = _.shuffle(obj)[0];
+  let place = _shuffle(obj)[0];
   return place;
 };
 
