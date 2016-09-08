@@ -3,7 +3,7 @@
 //MARK:- Make sure the token is loaded in ENV
 require('dotenv').load({silent: true});
 if (!process.env.TOKEN) {
-  console.log('Error: Specify token in environment');
+  console.warn('Error: Specify token in environment');
   throw new Error();
 }
 
@@ -16,7 +16,7 @@ const places = require('./modules/places');
 const controller = Botkit.slackbot({debug: false});
 const bot = controller.spawn({token: process.env.TOKEN});
 
-bot.startRTM((err, bot, payload) => {
+bot.startRTM(err => {
   if (err) throw new Error('Connection to Slack failed');
 });
 
@@ -27,7 +27,7 @@ controller.hears(queries, 'direct_message,direct_mention,mention', (bot, msg) =>
     channel: msg.channel
   }, (err) => console.error(err));
 
-  controller.storage.users.get(msg.user, (err, user) => {
+  controller.storage.users.get(msg.user, () => {
     let place = places.pickOne(places.data);
 
     bot.reply(msg, `Wa dacht je van *${place.title}*?

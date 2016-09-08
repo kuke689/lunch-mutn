@@ -1,23 +1,40 @@
 {
   "name": "lunch-mutn",
-  "version": "1.1.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Slack lunchbot for a Devine student team",
   "main": "server.js",
   "author": "Thibault Maekelbergh",
+  "repository": "https://github.com/thibmaek/lunch-mutn",
   "scripts": {
-    "start": "forever --minUptime 1000 --spinSleepTime 1000 .",
-    "test": "mocha --compilers js:babel-core/register --recursive",
-    "serve": "nodemon ."
+    "start": "./node_modules/forever/bin/forever --minUptime 1000 --spinSleepTime 1000 .",
+    "start:development": "./node_modules/nodemon/bin/nodemon.js .",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --recursive",
+    "test:eslint": "eslint .",
+    "test:eslint-fix": "eslint -v && npm run test:eslint -- --fix"
   },
   "engines": {
     "node": "6.x.x",
     "npm": "3.x.x"
   },
   "dependencies": {
-    "botkit": "0.2.2",
-    "dotenv": "2.0.0",
+    "botkit": "^0.2.2",
+    "dotenv": "^2.0.0",
     "forever": "^0.15.2",
     "lodash.shuffle": "^4.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.4.0",
+    "eslint-plugin-node": "^2.0.0",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
+    "should": "^11.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
