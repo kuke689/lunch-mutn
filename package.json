@@ -1,6 +1,6 @@
 {
   "name": "lunch-mutn",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Slack lunchbot for a Devine student team",
   "main": "server.js",
   "author": "Thibault Maekelbergh",
@@ -10,7 +10,7 @@
     "start:development": "./node_modules/nodemon/bin/nodemon.js .",
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register --recursive",
     "test:eslint": "eslint .",
-    "test:eslint-fix": "eslint -v && npm run test:eslint -- --fix"
+    "test:eslint-fix": "eslint -v && yarn run test:eslint -- --fix"
   },
   "engines": {
     "node": "6.x.x",

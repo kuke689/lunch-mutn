@@ -1,3 +1,8 @@
+# 2.0.1
+
+## New features
+* Refactored all code to use yarn instead of npm
+
 # 2.0.0
 
 ## New features
